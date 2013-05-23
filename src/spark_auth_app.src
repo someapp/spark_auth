@@ -1,4 +1,4 @@
-{application, spark_rabbitc_srv,
+{application, spark_auth_srv,
  [
   {description, "RabbitMQ client for spark. Absract some details away"},
   {vsn, "${PACKAGE_VERSION}"},
@@ -7,6 +7,6 @@
                   kernel,
                   stdlib
                  ]},
-  {mod, { spark_rabbitc_app, []}},
+  {mod, { spark_auth_app, []}},
   {env, []}
  ]}.
