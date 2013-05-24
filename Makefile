@@ -1,6 +1,6 @@
 ERLANG_HOME = /usr/local/lib/erlang
 ERL_LIBS = ${ERLANG_HOME}/lib
-PACKAGE_NAME = spark_auth_app
+PACKAGE_NAME = spark_auth
 PACKAGE_VERSION = 1.0.0
 VERBOSE = -vvv
 

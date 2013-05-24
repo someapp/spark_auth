@@ -31,7 +31,7 @@ io:format("PackageName: ~s and atom ~s~n",[PkgName, PkgNameAtom]),
        {app, stdlib, [{incl_cond, include}]},
        {app, kernel, [{incl_cond, include}]},
 %% PreR15       {app, PkgNameAtom, [{incl_cond, include}]}
-       {app, PkgNameAtom, [{incl_cond, include},{lib_dir,"../apps"}]}
+       {app, PkgNameAtom, [{mod_cond, app},{incl_cond, include},{lib_dir,"../apps"}]}
       ]},
 
 {target_dir, PkgName},
@@ -40,8 +40,8 @@ io:format("PackageName: ~s and atom ~s~n",[PkgName, PkgNameAtom]),
            {mkdir, "log/sasl"},
            {copy, "files/erl", "\{\{erts_vsn\}\}/bin/erl"},
            {copy, "files/nodetool", "\{\{erts_vsn\}\}/bin/nodetool"},
-           {copy, "files/mod_auth_spark", "bin/mod_auth_spark"},
-           {copy, "files/mod_auth_spark.cmd", "bin/mod_auth_spark.cmd"},
+           {copy, "files/spark_auth", "bin/spark_auth"},
+           {copy, "files/spark_auth.cmd", "bin/spark_auth.cmd"},
            {copy, "files/start_erl.cmd", "bin/start_erl.cmd"},
            {copy, "files/install_upgrade.escript", "bin/install_upgrade.escript"},
            {copy, "files/sys.config", "releases/\{\{rel_vsn\}\}/sys.config"},

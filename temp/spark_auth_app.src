@@ -1,0 +1,13 @@
+{application, spark_auth_srv,
+ [
+  {description, "RabbitMQ client for spark. Absract some details away"},
+ %% {vsn, "${PACKAGE_VERSION}"},
+  {vsn, 1.0.0},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, {spark_auth_app, []}},
+  {env, []}
+ ]}.

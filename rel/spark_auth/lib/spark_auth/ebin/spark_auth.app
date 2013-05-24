@@ -1,4 +1,4 @@
-%% app generated at {2013,5,24} {14,53,11}
+%% app generated at {2013,5,24} {17,4,18}
 {application,spark_auth,
              [{description,[]},
               {vsn,[]},
