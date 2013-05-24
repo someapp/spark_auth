@@ -3,6 +3,7 @@ Vsn = re:replace(VsnData, "^\\s+|\\s+$", "", [global, {return, list}]),
 {ok, PackageName} = file:read_file("../PACKAGE"),
 PkgName = re:replace(PackageName, "^\\s+|\\s+$", "", [global, {return, list}]),
 PkgNameAtom = list_to_atom(PkgName),
+io:format("PackageName: ~s and atom ~s~n",[PkgName, PkgNameAtom]),
 [{sys, [
        {lib_dirs, ["../apps", "../deps"]},
        {erts, [{mod_cond, derived}, {app_file, strip}]},
@@ -28,7 +29,9 @@ PkgNameAtom = list_to_atom(PkgName),
        {excl_app_filters, ["\.gitignore"]},
        {app, sasl,   [{incl_cond, include}]},
        {app, stdlib, [{incl_cond, include}]},
-       {app, kernel, [{incl_cond, include}]}
+       {app, kernel, [{incl_cond, include}]},
+%% PreR15       {app, PkgNameAtom, [{incl_cond, include}]}
+       {app, PkgNameAtom, [{incl_cond, include},{lib_dir,"../apps"}]}
       ]},
 
 {target_dir, PkgName},

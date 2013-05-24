@@ -1,0 +1,8 @@
+[{release,"spark_auth","1.0.0","5.9.3.1",
+          [{kernel,"2.15.3",
+                   "/opt/spark_auth/rel/spark_auth/lib/kernel-2.15.3"},
+           {stdlib,"1.18.3",
+                   "/opt/spark_auth/rel/spark_auth/lib/stdlib-1.18.3"},
+           {sasl,"2.2.1","/opt/spark_auth/rel/spark_auth/lib/sasl-2.2.1"},
+           {spark_auth,[],"/usr/local/lib/erlang/lib/spark_auth-"}],
+          permanent}].
